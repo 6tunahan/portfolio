@@ -2,14 +2,11 @@
   "name": "modern-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://6tunahan.github.io/portfolio",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && touch out/.nojekyll",
     "start": "next start",
-    "lint": "eslint",
-    "export": "next export",
-    "deploy": "next build && touch out/.nojekyll && gh-pages -d out -t true"
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
