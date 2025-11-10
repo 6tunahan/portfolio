@@ -5,7 +5,13 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: '/portfolio',
-  assetPrefix: '/portfolio',
-}
+  assetPrefix: '/portfolio/',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+    return config;
+  },
+};
 
 export default nextConfig;
